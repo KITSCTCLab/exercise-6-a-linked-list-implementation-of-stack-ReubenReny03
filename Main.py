@@ -1,15 +1,25 @@
 class Node:
+  """
+  The Node has 2 attributes
+  self.data --> to store the data
+  self.next --> to store the next location
+  """
   def __init__(self, data):
     self.data = data
     self.next = None
 
 
 class Stack:
+  """
+  The Stack as 1 attribute
+  self.top --> to keep track of the top most element
+  """
   def __init__(self):
-    self.head = None
+    #initlizing the attributes
     self.top = None
 
   def push(self, data) -> None:
+    # to push a value into the stack
       if self.top is None:
         new_node = Node(data)
         self.top = new_node
@@ -18,6 +28,7 @@ class Stack:
         new_node.next = self.top
         self.top = new_node
   def pop(self) -> None:
+    # to pop a value from the stack
       if self.top != None:
         if self.top.next == None:
           self.top = None
