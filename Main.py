@@ -34,8 +34,8 @@ class Stack:
       print(temp.data,end="=>")
       temp = temp.next
     if temp.next == None:
-      print(temp.data)
-    print(result)
+      print(temp.data,end="=>")
+      print(temp.next)
 
 
 
