@@ -18,17 +18,17 @@ class Stack:
         new_node.next = self.top
         self.top = new_node
   def pop(self) -> None:
-      if self.top.next == None:
-        self.top = None
-      else:
-        self.top = self.top.next
+      if self.top != None:
+        if self.top.next == None:
+          self.top = None
+        else:
+          self.top = self.top.next
 
 
   def status(self):
     """
     It prints all the elements of stack.
     """
-    result = ""
     temp = self.top
     if temp == None:
       print(temp)
@@ -38,7 +38,7 @@ class Stack:
         temp = temp.next
       if temp.next == None:
         print(temp.data,end="=>")
-        print(temp.next)
+        print(None)
 
 
 
