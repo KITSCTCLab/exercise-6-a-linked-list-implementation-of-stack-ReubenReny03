@@ -30,12 +30,15 @@ class Stack:
     """
     result = ""
     temp = self.top
-    while temp.next != None:
-      print(temp.data,end="=>")
-      temp = temp.next
-    if temp.next == None:
-      print(temp.data,end="=>")
-      print(temp.next)
+    if temp == None:
+      print(temp)
+    if temp is not None:
+      while temp.next != None:
+        print(temp.data,end="=>")
+        temp = temp.next
+      if temp.next == None:
+        print(temp.data,end="=>")
+        print(temp.next)
 
 
 
