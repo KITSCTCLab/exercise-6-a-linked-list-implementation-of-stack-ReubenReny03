@@ -28,12 +28,14 @@ class Stack:
     """
     It prints all the elements of stack.
     """
+    result = ""
     temp = self.top
     while temp.next != None:
-      print(temp.data)
+      print(temp.data,end="=>")
       temp = temp.next
     if temp.next == None:
       print(temp.data)
+    print(result)
 
 
 
